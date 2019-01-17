@@ -1,9 +1,452 @@
-<head>
-    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-    <link href="./tachyons.min.css" rel="stylesheet">
-    <link href="./index.css" rel="stylesheet">
-</head>
-<body>
-    <script src="https://unpkg.com/mithril/mithril.js"></script>
-    <script src="./index.js"></script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>nimrod.io</title>
+    <meta name="nimrod" content="">
+    <meta name="a cloud based automation and compliance software" content="">
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6770476/6061012/css/fonts.css" />
+    <style>
+
+    body {
+      font-family: 'Whitney ScreenSmart' , 'Avenir', sans-serif;
+    }
+
+      @media screen and (max-width: 60em) and (min-width: 30em) { 
+        #coffee {
+          top: -400px;
+          left: -150px;
+        }
+        #phone {
+          left: 25%;
+        }
+      }
+
+      @media screen and (min-width: 30em) { 
+        #coffee {
+          top: -400px;
+        }
+
+        #about {
+          max-height: 50em;
+        }
+
+      }
+
+      .container {
+        max-width: 90em;
+        margin: 0 auto !important;
+        float: none !important;
+      }
+
+      #hero {
+          background: url('/images/star_bg.svg') ;
+          background-size: 3840px 1000px;
+          background-repeat: repeat;
+          background-attachment: fixed;
+      }
+
+      #hero-front {
+        min-height: 400px;
+        background: url('/images/bldg-bg-1.svg') ;
+        background-position: left bottom;
+        background-repeat: repeat-x;
+        background-size: 1200px 225px;
+      }
+
+      #hero-back {
+        min-height: 400px;
+        background: url('/images/bldg-bg-3.svg') ;
+        background-position: left bottom;
+        background-repeat: repeat-x;
+        background-size: 1200px 300px;
+      }
+
+      #hero-gradient-bg {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0e0e0e+68,383838+0 */
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(51,51,51,1) 95%);
+      }
+
+      #hero-skyline {
+        min-height: 400px;
+        background: url('/images/bldg-bg-2.svg') ;
+        background-position: left bottom;
+        background-repeat: repeat-x;
+        background-size: 1000px 275px;
+      }
+
+      #bascom {
+        background: url('/images/bascom.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #AAA;
+        background-size: 100%;
+        min-height: 650px;
+      }
+
+      #menuToggle
+      {
+        display: block;
+        position: relative;
+/*        top: 50px;
+        left: 50px;*/
+        
+        z-index: 1;
+        
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      #menuToggle input
+      {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        
+        cursor: pointer;
+        
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+        
+        -webkit-touch-callout: none;
+      }
+
+      /*
+       * Just a quick hamburger
+       */
+      #menuToggle span
+      {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        
+        background: #ddd;
+        border-radius: 3px;
+        
+        z-index: 1;
+        
+        transform-origin: 4px 0px;
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+      }
+
+      #menuToggle span:first-child
+      {
+        transform-origin: 0% 0%;
+      }
+
+      #menuToggle span:nth-last-child(2)
+      {
+        transform-origin: 0% 100%;
+      }
+
+      /* 
+       * Transform all the slices of hamburger
+       * into a crossmark.
+       */
+      #menuToggle input:checked ~ span
+      {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #DDD;
+      }
+
+      /*
+       * But let's hide the middle one.
+       */
+      #menuToggle input:checked ~ span:nth-last-child(3)
+      {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+
+      /*
+       * Ohyeah and the last one should go the other direction
+       */
+      #menuToggle input:checked ~ span:nth-last-child(2)
+      {
+        transform: rotate(-45deg) translate(0, -1px);
+      }
+
+      /*
+       * Make this absolute positioned
+       * at the top left of the screen
+       */
+      #menu
+      {
+        overflow: show;
+        position: absolute;
+        right: 0px;
+        width: 300px;
+        margin: -100px -100px 0 0;
+        padding: 50px;
+        padding-top: 125px;
+        
+        background: #333;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+      }
+
+      #menu li
+      {
+        padding: 10px 0;
+        font-size: 22px;
+      }
+
+      /*
+       * And let's slide it in from the left
+       */
+      #menuToggle input:checked ~ ul
+      {
+        transform: none;
+      }
+    </style>
+  </head>
+
+  <body id='page-top'>
+    <!-- title bar -->
+    <header id="main-nav" class='z-max bg-black fixed w-100 b white link white'>
+      <div class="container flex justify-between pv3 ph3-m ph5">
+        <nav class="h2">
+          <a href="#page-top">
+           <img id ='header-logo' class='pl2' src="/images/nimrod_logo.svg" style="width: 100px">
+          </a>
+        </nav>
+        <nav class="f6 tracked tc dt dn-m v-mid h2 pr3 helvetica">
+          <a class="link dim b dtc ph3 v-mid color-inherit" href="#about">About</a>
+          <a class="link dim b dtc ph3 v-mid color-inherit" href="#applications">Applications</a>
+          <a class="link dim b dtc ph3 v-mid color-inherit" href="#contact">Contact</a>
+        </nav>
+
+
+        <nav role="navigation" class="dn db-m">
+          <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox" />
+            
+            <!--
+            Some spans to act as a hamburger.
+            
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+            <span></span>
+            <span></span>
+            <span></span>
+            
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+            <ul id="menu">
+              <a href="#about"><li>About</li></a>
+              <a href="#applications"><li>Applications</li></a>
+              <a href="#contact"><li>Contact</li></a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- ^^^^ title bar ^^^^ --> 
+
+    <!-- skyline -->
+    <div class="w-100 relative" style="min-height: 400px;">
+      <div id="hero-gradient-bg" class="h-100 w-100 absolute"></div>
+      <div id="hero" class="h-100 w-100 absolute"></div>
+      <div id="hero-back" class="w-100 absolute"></div>
+      <div id="hero-skyline" class="w-100 absolute"></div>
+      <div id="hero-front" class="w-100 absolute"></div>
+    </div>
+    <!-- ^^^^ skyline ^^^^ -->  
+
+    <!-- hero -->
+    <div id='about' class="w-100 relative overflow-hidden bg-light-gray">
+      <div class='cf container pa3-m pa5 tl tc-m'>
+        <div class="fl w-50 w-100-m nowrap">
+          <h1 class="f1 fw4 "> Data tells the story.</h1>
+          <div class="f3 fw4 "> Instantly validate compliance and efficiency</div>
+          <div class="f3 fw4"> Understand the state of your systems in real-time</div>
+        </div>
+        <div class="fl w-50 w-100-m tc">
+          <img id='phone' class='relative' width="500px" src='/images/iphone.png' style='min-width: 500px'/>
+        </div>
+        <div id="coffee"class="fl w-50 relative" style='min-width: 400px'>
+          <img width="500px" src='/images/coffee.png'/>
+        </div>
+      </div>
+    </div>
+    <!-- ^^^^ hero ^^^^ -->
+
+    <!-- Regulatory Compliance -->
+    <div id='compliance' class="w-100 relative overflow-hidden bg-dark-gray">
+      <div class='cf container pa3-m pa5 white'>
+        <div class='fl w-100 pa2 mv0'>
+          <h1 class="f1 fw4">Confident regulatory compliance.</h1>
+        </div>
+        <div class='fl w-50 w-100-m pa2 h5 f1'>
+          <h2 class='f3 fw6 light-blue'>
+            Deliver the facts
+          </h2>
+          <p class='f4 fw4'> 
+            With reports purpose-built for regulatory agencies and a high-performance database, you are ready at a moments notice to deliver years of historical data in a format that has proven success. Deliver the required data on demand, no more, no less.
+          </p>
+        </div>
+        <div class='fl w-50 w-100-m pa2 h5'>
+          <h2 class='f3 fw6 light-blue'>
+            Streamline incident response
+          </h2>
+          <p class='f4 fw4'>
+            Eliminate alarm fatigue with fine-grained tolerances and scheduling.  Automatically generate work orders through your existing time management solution.  Escalate unresolved or repetitive issues to upper management automatically.
+          </p>
+        </div>
+        <div class='fl w-50 w-100-m pa2 h5'>
+          <h2 class='f3 fw6 light-blue'>
+            Bulletproof data acquisition
+          </h2>
+          <p class='f4 fw4'>
+            Alert the correct parties the moment a network or device goes offline, continually audit the health of your data stream.
+          </p>
+        </div>
+        <div class='fl w-50 w-100-m pa2 h5'>
+          <h2 class='f3 fw6 light-blue'>
+            Enlist our experience
+          </h2>
+          <p class='f4 fw4'>
+            Nimrod has helped our clients successfully report to agencies such as The Joint Commission, U.S. Food and Drug Administration, AAALAC, and others.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class='cf w-100 w-100 relative flex justify-center items-center'>
+      <img src='/images/bascom.png' style='min-width: 100%; min-height: 100%;'>
+    </div>
+    <div class='pv3 ph5 w-100 fw3 bg-black white'>
+      <div class='container'>
+        <p class='f3 fw3 ma0 mb2'> Bascom Palmer Eye Institute</p>
+        <p class='f4 fw3 ma0'> A global leader in eye care, Bascom Palmer relies on nimrod to record compliance data for operating rooms across their five locations. Ventilation controls are also integrated for remote monitoring and service.</p>
+      </div>
+    </div>
+    <!-- ^^^^ regulatory compliance ^^^^ -->
+
+    <!-- integration pitch -->
+    <div id='integration' class="w-100 relative overflow-hidden bg-dark-gray">
+      <div class='cf container pa3-m pa5 white'>
+        <div class='fl w-100 pa2 mv0'>
+          <h1 class="f1 fw4">Automation has a new standard.</h1>
+        </div>
+        <div class='fl w-50 w-100-m pa2 h5 f4'>
+          <h2 class='f3 fw6 light-blue'>
+            Get the most from your hardware
+          </h2>
+          <p class='f4 fw4'>
+            Nimrod provides a common, intuitive interface to digital control systems. Unlimited users and fine-grained access controls enable members of your organization to leverage facility systems directly to streamline operations and enhance comfort.  The latest real-time web technologies ensure the highest level of responsiveness possible.
+          </p>
+        </div>
+        <div class='fl w-50 w-100-m pa2 h5 f4'>
+          <h2 class='f3 fw6 light-blue'>
+            Never migrate again
+          </h2>
+          <p class='f4 fw4'>
+            The obsolecense cycles of traditional facility management systems frequently result in costly migrations or even complete reintegration.  Our rolling release model ensures that future updates are deployed seamlessly and are included with all our licenses.
+          </p>
+        </div>
+        <div class='fl w-50 w-100-m pa2 h5 f4'>
+          <h2 class='f3 fw6 light-blue'>
+            Automated enterprise workflows
+          </h2>
+          <p class='f4 fw4'>
+            Our APIs will always be openly documented.  As a result nimrod currently auotomates actions between facility managment, work order, time management, and business intelligence systems.  New integrations are added continuously.
+          </p>
+        </div>
+        <div class='fl w-50 w-100-m pa2 h5 f4'>
+          <h2 class='f3 fw6 light-blue'>
+            Development at your disposal
+          </h2>
+          <p class='f4 fw4'>
+            Efficient software development is our core value.  Nimrod is engineered for flexiblity.  Get custom features and integrations in days, not months.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class='cf w-100 w-100 relative flex justify-center items-center'>
+      <img src='/images/umcep.png' style='min-width: 100%; min-height: 100%;'>
+    </div>
+    <div class='pv3 ph5 w-100 fw3 bg-black white'>
+      <div class='container'>
+        <p class='f3 fw3 ma0 mb2'> University of Miami - Miller School of Medicine</p>
+        <p class='f4 fw3 ma0'> The University of Miami Health System uses nimrod to monitor and control a district cooling plant in downtown Miami.  Facility managers control the 13,000 ton system 24/7 remotely.
+      </div>
+    </div>
+
+    <div id='about' class="w-100 relative overflow-hidden bg-dark-gray container">
+      <div class='fl w-100 pa2 mv0'>
+        <h1 class="f1 fw4 white">Contact Us</h1>
+      </div>
+    </div>
+    <!-- ^^^^ contact ^^^^ -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- <script src="//cdn.rawgit.com/twbs/bootstrap/v3.3.7/js/affix.js"></script> -->
+    <script type="text/javascript">
+    $(function() {
+      // $('#mainNav').affix();
+      // The function
+      // var background_image_parallax = function($object, multiplier, offset){
+      //   multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+      //     multiplier = 1 - multiplier;
+
+      //   offset = typeof offset !== 'undefined' ? offset : 0;
+      //   var $doc = $(document);
+      //   $object.css({"background-attatchment" : "fixed"});
+      //     $(window).on('scroll resize', function(){
+      //       var from_top = $doc.scrollTop(),
+      //           bg_css = '0px ' +((multiplier * from_top) + $(window).height() - offset) + 'px';
+      //       $object.css({"background-position" : bg_css });
+      //   });
+      // };
+
+      //Just pass the jQuery object
+      // background_image_parallax($("#hero-back"), 0.1, 300);
+      // background_image_parallax($("#hero-skyline"), 0.3, 265);
+      // background_image_parallax($("#hero-front"), 0.5, 225);
+
+      $(document).on('click', 'a.page-scroll', function(e) {
+        e.preventDefault();
+        var $anchor = $(this);
+
+        $('html, body')
+          .stop()
+          .animate(
+            { scrollTop: $($anchor.attr('href')).offset().top - 370 },
+            1250,
+            'easeInOutExpo'
+          );
+      });
+    });
+    </script>
+  </body>
+</html>

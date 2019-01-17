@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg2" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 280 130"
+	 style="enable-background:new 0 0 280 130;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#BDBDBD;stroke-width:4;stroke-linecap:square;}
+	.st1{fill:#BDBDBD;}
+	.st2{font-family:'Arial-BoldMT';}
+	.st3{font-size:57.19687px;}
+	.st4{fill:none;stroke:#BDBDBD;stroke-width:2.49709;}
+	.st5{fill:none;}
+	.st6{fill:none;stroke:#D1CCCC;stroke-width:1.92344;}
+	.st7{font-family:'Arial-Black';}
+	.st8{font-size:11.33232px;}
+	.st9{font-size:11.33237px;}
+</style>
+<g id="g3582">
+	<path id="path3367" class="st0" d="M28.58665,76.78187v14.73202h238.54539V75.64864"/>
+	<path id="path3389" class="st0" d="M85.24827,90.94727V73.94878"/>
+	<path id="path3393" class="st0" d="M167.79485,89.54687V72.54839"/>
+	<path id="path3395" class="st0" d="M214.93465,90.35497V73.35649"/>
+	<path id="path3397" class="st0" d="M240.18756,91.33864V75.68525"/>
+	<path id="path3399" class="st0" d="M127.74448,90.94727V65.44955"/>
+</g>
+<text transform="matrix(1 0 0 1 62.58279 76.78176)" class="st1 st2 st3">BACnet</text>
+<path id="path2437" class="st4" d="M6.08565,56.18685l11.26537-19.51217h22.53069l11.26537,19.51217L39.88172,75.69903h-22.5307
+	L6.08565,56.18685z"/>
+<path id="path3211" class="st1" d="M22.67684,46.39969l-5.59534,9.66788l5.59534,9.68559H33.8498l5.57763-9.68559l-5.57763-9.66788
+	C33.8498,46.39969,22.67684,46.39969,22.67684,46.39969z M28.25446,51.30446c2.637,0,4.78082,2.16587,4.78082,4.81623
+	c0,2.65037-2.14383,4.79853-4.78082,4.79853s-4.78082-2.14816-4.78082-4.79853
+	C23.47364,53.47033,25.61747,51.30446,28.25446,51.30446z"/>
+<path id="path3241" class="st5" d="M18.38858,56.11205H38.2129l0,0 M23.48088,47.61281l9.63247,16.99848 M28.31271,48.71915
+	v14.70629l0,0 M34.81321,52.14574l-13.03217,7.93262 M33.11336,47.61281l-9.63247,16.99848 M21.78103,52.14574l13.03217,7.93262"/>
+<path id="path3213" class="st6" d="M29.61067,56.13522c0,0.63166-0.51206,1.14372-1.14372,1.14372s-1.14373-0.51206-1.14373-1.14372
+	s0.51206-1.14372,1.14373-1.14372C29.09861,54.9915,29.61067,55.50357,29.61067,56.13522z"/>
+<text transform="matrix(1 0 0 1 23.85233 45.65774)" class="st1 st7 st8">H</text>
+<text transform="matrix(0.5 0.86603 -0.86603 0.5 34.92929 46.55065)" class="st1 st7 st9">R</text>
+<text transform="matrix(-0.5 0.86603 -0.86603 -0.5 39.64832 57.64495)" class="st1 st7 st9">A</text>
+<text transform="matrix(1 0 0 1 24.33182 74.76809)" class="st1 st7 st8">E</text>
+<text transform="matrix(-0.5 -0.86603 0.86603 -0.5 21.65681 65.61726)" class="st1 st7 st9">A</text>
+<text transform="matrix(0.5 -0.86603 0.86603 0.5 17.25435 54.68443)" class="st1 st7 st9">S</text>
+</svg>
