@@ -28,9 +28,6 @@
           top: -400px;
           left: -150px;
         }
-        #phone {
-          left: 25%;
-        }
       }
 
       @media screen and (min-width: 40em) { 
@@ -42,6 +39,12 @@
           max-height: 50em;
         }
 
+      }
+
+      @media screen and (max-width: 24em) {
+        #phone {
+          right: 25%;
+        }
       }
 
       .container {
@@ -229,6 +232,7 @@
   </head>
 
   <body id='page-top'>
+    
     <!-- title bar -->
     <header id="main-nav" class='z-max bg-black fixed w-100 fw7 white link'>
       <div class="container flex justify-between pv3 ph3 ph5-m ph5-l">
@@ -291,11 +295,22 @@
     <div id='hero' class="w-100 relative overflow-hidden bg-light-gray">
       <div class='cf container pa3 pa5-ns pa5-m tc tl-ns tl-m'>
         <div class="fl w-100 w-50-m w-50-l">
-          <h1 class="f1"> 
-            <span class='fw7'>Data</span> <span class='fw4 i'> tells the story.</span>
+          <h1 class="f1">
+            <span class='fw7'>Data</span> 
+            <span class='fw4 i nowrap'> tells the story.</span>
           </h1>
-          <div class="f3 fw4 i"> Instantly validate compliance and efficiency</div>
-          <div class="f3 fw4 i"> Understand the state of your systems in real-time</div>
+          <div class="f3 fw4 i"> 
+            <span class='nowrap'>Instantly validate</span> 
+            <span class='nowrap'>compliance and efficiency</span>
+          </div>
+          <div class="f3 fw4 i"> 
+            <span class='nowrap'>
+              Understand the state of 
+            </span>
+            <span class='nowrap'>
+              your systems in real-time
+            </span>
+          </div>
         </div>
         <div class="fl w-100 w-50-m w-50-l tc">
           <img id='phone' class='relative' width="500px" src='/images/iphone.png' style='min-width: 500px'/>
@@ -311,7 +326,7 @@
     <div id='applications' class="w-100 relative overflow-hidden bg-dark-gray">
       <div class='container white grid'>
         <div class='w-100 w-50-m w-50-l grid-item'></div> <!-- This is a placeholder for masonry -->
-        <div class='w-100 mv0 ph2 ph5-m ph5-l mt5 grid-item'>
+        <div class='w-100 mv0 ph4 ph5-m ph5-l mt5 grid-item'>
           <h1 class="f1 fw3 mv4">Confident regulatory compliance</h1>
         </div>
         <div class='w-100 w-50-m w-50-l ph4 ph5-m ph5-l f4 grid-item'>
@@ -348,7 +363,7 @@
         </div>
       </div>
     </div>
-    <div class='cf w-100 w-100 relative flex justify-center items-center'>
+    <div class='cf w-100 relative flex justify-center items-center'>
       <img src='/images/bascom.png' style='min-width: 100%; min-height: 100%;'>
     </div>
     <div class='w-100 bg-black'>
@@ -365,8 +380,8 @@
     <div id='integration' class="w-100 relative overflow-hidden bg-dark-gray">
       <div class='container white grid'>
         <div class='w-100 w-50-m w-50-l grid-item'></div> <!-- This is a placeholder for masonry -->
-        <div class='w-100 mv0 ph2 ph5-m ph5-l mt5 grid-item'>
-          <h1 class="f1 fw3 mv4">Automation has a new standard</h1>
+        <div class='w-100 mv0 ph4 ph5-m ph5-l mt5 grid-item'>
+          <h1 class="f1 fw3 mv4">New standards for automation</h1>
         </div>
         <div class='w-100 w-50-m w-50-l ph4 ph5-m ph5-l f4 grid-item'>
           <h2 class='f3 fw3 blue'>
@@ -403,7 +418,7 @@
       </div>
     </div>
 
-    <div class='cf w-100 w-100 relative flex justify-center items-center'>
+    <div class='cf w-100 relative flex justify-center items-center'>
       <img src='/images/umcep.png' style='min-width: 100%; min-height: 100%;'>
     </div>
     <div class='w-100 bg-black'>
