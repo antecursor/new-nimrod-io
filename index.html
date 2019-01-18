@@ -37,14 +37,14 @@
           top: -400px;
         }
 
-        #about {
+        #hero {
           max-height: 50em;
         }
 
       }
 
       .container {
-        max-width: 90em;
+        max-width: 96em;
         margin: 0 auto !important;
         float: none !important;
       }
@@ -230,20 +230,20 @@
   <body id='page-top'>
     <!-- title bar -->
     <header id="main-nav" class='z-max bg-black fixed w-100 fw7 white link'>
-      <div class="container flex justify-between pv3 ph3-m ph5">
+      <div class="container flex justify-between pv3 ph3 ph5-m ph5-l">
         <nav class="h2">
           <a href="#page-top">
            <img id ='header-logo' class='pl2' src="/images/nimrod_logo.svg" style="width: 100px">
           </a>
         </nav>
-        <nav class="f6 tracked tc dt dn-m v-mid h2 pr3">
-          <a class="link dim fw7 dtc ph3 v-mid color-inherit" href="#about">About</a>
-          <a class="link dim fw7 dtc ph3 v-mid color-inherit" href="#applications">Applications</a>
-          <a class="link dim fw7 dtc ph3 v-mid color-inherit" href="#contact">Contact</a>
+        <nav class="f6 tracked tc dn dt-m dt-l h2 pr3">
+          <a href="#about" class="link dim fw7 dtc ph3 v-mid color-inherit" >About</a>
+          <a href="#applications" class="link dim fw7 dtc ph3 v-mid color-inherit" >Applications</a>
+          <a href="#contact" class="link dim fw7 dtc ph3 v-mid color-inherit" >Contact</a>
         </nav>
 
 
-        <nav role="navigation" class="dn db-m">
+        <nav role="navigation" class="db dn-m dn-l">
           <div id="menuToggle">
             <!--
             A fake / hidden checkbox is used as click reciever,
@@ -277,7 +277,7 @@
     <!-- ^^^^ title bar ^^^^ --> 
 
     <!-- skyline -->
-    <div class="w-100 relative" style="min-height: 400px;">
+    <div id='about' class="w-100 relative" style="min-height: 400px;">
       <div id="hero-gradient-bg" class="h-100 w-100 absolute"></div>
       <div id="hero" class="h-100 w-100 absolute"></div>
       <div id="hero-back" class="w-100 absolute"></div>
@@ -287,19 +287,19 @@
     <!-- ^^^^ skyline ^^^^ -->  
 
     <!-- hero -->
-    <div id='about' class="w-100 relative overflow-hidden bg-light-gray">
-      <div class='cf container pa3-m pa5 tl tc-m'>
-        <div class="fl w-50 w-100-m nowrap">
+    <div id='hero' class="w-100 relative overflow-hidden bg-light-gray">
+      <div class='cf container pa3 pa5-ns pa5-m tc tl-ns tl-m'>
+        <div class="fl w-100 w-50-m w-50-l">
           <h1 class="f1"> 
             <span class='fw7'>Data</span> <span class='fw4 i'> tells the story.</span>
           </h1>
           <div class="f3 fw4 i"> Instantly validate compliance and efficiency</div>
           <div class="f3 fw4 i"> Understand the state of your systems in real-time</div>
         </div>
-        <div class="fl w-50 w-100-m tc">
+        <div class="fl w-100 w-50-m w-50-l tc">
           <img id='phone' class='relative' width="500px" src='/images/iphone.png' style='min-width: 500px'/>
         </div>
-        <div id="coffee"class="fl w-50 relative" style='min-width: 400px'>
+        <div id="coffee"class="fl dn db-ns w-50 relative" style='min-width: 400px'>
           <img width="500px" src='/images/coffee.png'/>
         </div>
       </div>
@@ -307,12 +307,12 @@
     <!-- ^^^^ hero ^^^^ -->
 
     <!-- Regulatory Compliance -->
-    <div id='compliance' class="w-100 relative overflow-hidden bg-dark-gray">
-      <div class='cf container pa3-m pa5 white'>
-        <div class='fl w-100 pa2 mv0'>
-          <h1 class="f1 fw7">Confident regulatory compliance</h1>
+    <div id='applications' class="w-100 relative overflow-hidden bg-dark-gray">
+      <div class='cf container white'>
+        <div class='fl w-100 ph2  ph4 ph5-m ph5-l mt5'>
+          <h1 class="f1 fw7 mv5">Confident regulatory compliance</h1>
         </div>
-        <div class='fl w-50 w-100-m pa2 h5 f1'>
+        <div class='fl w-100 w-50-m w-50-l h5 h4-l ph4 ph5-m ph5-l f4 f1'>
           <h2 class='f4 fw7 light-blue ideal-sans'>
             Deliver the facts
           </h2>
@@ -320,7 +320,7 @@
             With reports purpose-built for regulatory agencies and a high-performance database, you are ready at a moments notice to deliver years of historical data in a format that has proven success. Deliver the required data on demand, no more, no less.
           </p>
         </div>
-        <div class='fl w-50 w-100-m pa2 h5'>
+        <div class='fl w-100 w-50-m w-50-l h5 h4-l ph4 ph5-m ph5-l f4'>
           <h2 class='f4 fw7 light-blue ideal-sans'>
             Streamline incident response
           </h2>
@@ -328,7 +328,7 @@
             Eliminate alarm fatigue with precise tolerances and scheduling.  Automatically generate work orders through your existing time management solution.  Escalate unresolved or repetitive issues to upper management automatically.
           </p>
         </div>
-        <div class='fl w-50 w-100-m pa2 h5'>
+        <div class='fl w-100 w-50-m w-50-l h5 h4-l ph4 ph5-m ph5-l f4'>
           <h2 class='f4 fw7 light-blue ideal-sans'>
             Bulletproof data acquisition
           </h2>
@@ -336,7 +336,7 @@
             Alert the correct parties the moment a network or device goes offline, continually audit the health of your data stream.
           </p>
         </div>
-        <div class='fl w-50 w-100-m pa2 h5'>
+        <div class='fl w-100 w-50-m w-50-l h5 h4-l ph4 ph5-m ph5-l f4'>
           <h2 class='f4 fw7 light-blue ideal-sans'>
             Enlist our experience
           </h2>
@@ -349,37 +349,39 @@
     <div class='cf w-100 w-100 relative flex justify-center items-center'>
       <img src='/images/bascom.png' style='min-width: 100%; min-height: 100%;'>
     </div>
-    <div class='pv3 ph5 w-100 fw4 bg-black white'>
+    <div class='w-100 bg-black'>
       <div class='container'>
-        <p class='f4 fw4 ma0 mb2'> Bascom Palmer Eye Institute</p>
-        <p class='f5 fw4 ma0 ideal-sans i'> A global leader in eye care, Bascom Palmer relies on nimrod to record compliance data for operating rooms across their five locations. Ventilation controls are also integrated for remote monitoring and service.</p>
+        <div class='pv3 ph4 ph5-m ph5-l fw4 bg-black white'>
+          <p class='f4 fw4 ma0 mb2'> Bascom Palmer Eye Institute</p>
+          <p class='f5 fw4 ma0 ideal-sans i'> A global leader in eye care, Bascom Palmer relies on nimrod to record compliance data for operating rooms across their five locations. Ventilation controls are also integrated for remote monitoring and service.</p>
+        </div>
       </div>
     </div>
     <!-- ^^^^ regulatory compliance ^^^^ -->
 
     <!-- integration pitch -->
     <div id='integration' class="w-100 relative overflow-hidden bg-dark-gray">
-      <div class='cf container pa3-m pa5 white'>
-        <div class='fl w-100 pa2 mv0'>
-          <h1 class="f1 b">Automation has a new standard</h1>
+      <div class='cf container white'>
+        <div class='fl w-100 ph2 mv0 ph4 ph5-m ph5-l mt4'>
+          <h1 class="f1 fw7 mv4">Automation has a new standard</h1>
         </div>
-        <div class='fl w-50 w-100-m pa2 h5 f4'>
+        <div class='fl w-100 w-50-m w-50-l h5 h4-l ph4 ph5-m ph5-l f4'>
           <h2 class='f4 fw7 light-blue ideal-sans'>
             Get the most from your hardware
           </h2>
           <p class='f5 ideal-sans'>
-            Nimrod provides a common, intuitive interface to digital control systems. Unlimited users and fine-grained access controls enable members of your organization to leverage facility systems directly to streamline operations and enhance comfort.  The latest real-time web technologies ensure the highest level of responsiveness possible.
+            Nimrod provides a common, intuitive interface to digital control systems. Unlimited users and fine-grained access controls enable members of your organization to leverage facility systems directly to streamline operations and enhance comfort.
           </p>
         </div>
-        <div class='fl w-50 w-100-m pa2 h5 f4'>
+        <div class='fl w-100 w-50-m w-50-l h5 h4-l ph4 ph5-m ph5-l f4'>
           <h2 class='f4 fw7 light-blue ideal-sans'>
             Never migrate again
           </h2>
           <p class='f5 ideal-sans'>
-            The obsolecense cycles of traditional facility management systems frequently result in costly migrations or even complete reintegration.  Our rolling release model ensures that future updates are deployed seamlessly and are included with all our licenses.
+            The obsolecense cycles of traditional facility management systems frequently result in costly migrations or even complete reintegration.  Our rolling release model ensures that future updates are always backward-compatible.
           </p>
         </div>
-        <div class='fl w-50 w-100-m pa2 h5 f4'>
+        <div class='fl w-100 w-50-m w-50-l h5 h4-l ph4 ph5-m ph5-l f4'>
           <h2 class='f4 fw7 light-blue ideal-sans'>
             Automated enterprise workflows
           </h2>
@@ -387,7 +389,7 @@
             Our APIs will always be openly documented.  As a result nimrod currently automates actions between facility managment, work order, time management, and business intelligence systems.  New integrations are added continuously.
           </p>
         </div>
-        <div class='fl w-50 w-100-m pa2 h5 f4'>
+        <div class='fl w-100 w-50-m w-50-l h5 h4-l ph4 ph5-m ph5-l f4'>
           <h2 class='f4 fw7 light-blue ideal-sans'>
             Development at your disposal
           </h2>
@@ -401,10 +403,12 @@
     <div class='cf w-100 w-100 relative flex justify-center items-center'>
       <img src='/images/umcep.png' style='min-width: 100%; min-height: 100%;'>
     </div>
-    <div class='pv3 ph5 w-100 fw4 bg-black white'>
+    <div class='w-100 bg-black'>
       <div class='container'>
-        <p class='f4 fw4 ma0 mb2'> University of Miami - Miller School of Medicine</p>
-        <p class='f5 fw4 ma0 ideal-sans i'> The University of Miami Health System uses nimrod to monitor and control a district cooling plant in downtown Miami.  Facility managers control the 13,000 ton system 24/7 remotely.
+        <div class='pv3 ph4 ph5-m ph5-l fw4 bg-black white'>
+          <p class='f4 fw4 ma0 mb2'> University of Miami - Miller School of Medicine</p>
+          <p class='f5 fw4 ma0 ideal-sans i'> The University of Miami Health System uses nimrod to monitor and control a district cooling plant in downtown Miami.  Facility managers control the 13,000 ton system 24/7 remotely.
+        </div>
       </div>
     </div>
 
@@ -416,24 +420,21 @@
     <!-- ^^^^ contact ^^^^ -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <!-- <script src="//cdn.rawgit.com/twbs/bootstrap/v3.3.7/js/affix.js"></script> -->
     <script type="text/javascript">
     $(function() {
-      // $('#mainNav').affix();
-      // The function
-      // var background_image_parallax = function($object, multiplier, offset){
-      //   multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
-      //     multiplier = 1 - multiplier;
+      var background_image_parallax = function($object, multiplier, offset){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+          multiplier = 1 - multiplier;
 
-      //   offset = typeof offset !== 'undefined' ? offset : 0;
-      //   var $doc = $(document);
-      //   $object.css({"background-attatchment" : "fixed"});
-      //     $(window).on('scroll resize', function(){
-      //       var from_top = $doc.scrollTop(),
-      //           bg_css = '0px ' +((multiplier * from_top) + $(window).height() - offset) + 'px';
-      //       $object.css({"background-position" : bg_css });
-      //   });
-      // };
+        offset = typeof offset !== 'undefined' ? offset : 0;
+        var $doc = $(document);
+        $object.css({"background-attatchment" : "fixed"});
+          $(window).on('scroll resize', function(){
+            var from_top = $doc.scrollTop(),
+                bg_css = '0px ' +((multiplier * from_top) + $(window).height() - offset) + 'px';
+            $object.css({"background-position" : bg_css });
+        });
+      };
 
       //Just pass the jQuery object
       // background_image_parallax($("#hero-back"), 0.1, 300);
